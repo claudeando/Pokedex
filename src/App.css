@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+#gameScreen,
+#gameConsole {
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ------------------------------ Top-half */
+
+#gameScreen {
+  width: 100%;
+  height: 17.5rem;
+  background: #565661;
+  border-radius: 1rem;
+  border-bottom-right-radius: 3.5rem !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#gameScreen header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .75rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.screen {
+  height: 13rem;
+  display: grid;
+  place-items: center;
+  margin: 0 2.5rem;
+  background: rgb(235, 235, 235);
+  border: 2.5px solid var(--gameboy-other);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+aside {
+  position: absolute;
+}
+
+
+/* ------------------------------ Pokedex screen */
+
+#pokedex {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2rem 1fr;
+}
+
+#pokedex main {
+  width: 100%;
+  display: grid;
+}
+
+#pokedex input {
+  position: relative;
+  z-index: 99;
+  background: transparent;
+  padding-left: .5rem;
+  border: .5px solid;
+  border-radius: 0;
+  cursor: pointer;
+  color: black;
+}
+
+nav {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+nav button {
+  background: transparent;
+  padding: .48rem .2rem;
+  border: .5px solid;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#pokedex figure {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  margin: .25rem .5rem
+}
+
+#pokedex figure img {
+  width: 5rem;
+}
+
+#pokedex figcaption {
+  grid-column: 2/4;
+  font-size: .65rem;
+}
+
+#characteristics {
+  grid-column: 1/4;
+  grid-row: 2/3;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+#pokedex ul li {
+  list-style: none;
+  font-size: .65rem;
+}
+
+
+/* ------------------------------ Btm-half */
+
+#gameConsole {
+  width: 100%;
+}
+
+.console {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+}
+
+.actionBtn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  position: relative;
+  right: 2.5rem;
+}
+
+.actionBtn button:nth-child(6) {
+  transform: rotate(180deg);
+}
+
+.actionBtn button:nth-child(8) {
+  transform: rotate(180deg);
+}
+
+.actionBtn div:nth-child(5) {
+  background: var(--consoleBtn);
+}
+
+.actionBtn button {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: var(--consoleBtn);
+  border-radius: 2.5px;
+}
+
+.abBtn {
+  display: flex;
+  gap: 1rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  transform: rotate(-25deg);
+  position: relative;
+  left: 2.5rem;
+}
+
+.abBtn button {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--abBtn);
+  border-radius: 50%;
+}
+
+.otherBtn {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  position: relative;
+  right: 1.5rem;
+  transform: scale(1.25);
+}
+
+.otherBtn button {
+  background: #565661;
+  width: 3rem;
+  height: 0.75rem;
+  border-radius: 10px;
+  transform: rotate(-25deg);
+}
+
+.speaker {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 2.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  transform: rotate(45deg);
+}
+
+.speaker span {
+  width: 4.5rem;
+  height: 0.5rem;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
 }
