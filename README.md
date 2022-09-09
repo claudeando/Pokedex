@@ -1,4 +1,8 @@
-2 hours coding challenge, developped in React.
+2 hours coding challenge to replicate the Pokedex. <br>
+
+Gameboy styled in CSS,
+developped in React,
+Pokemon API.
 
 <br />
 
