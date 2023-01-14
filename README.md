@@ -1,8 +1,7 @@
-2 hours coding challenge to replicate the Pokedex. <br>
+This was part of my 2 hours coding challenge to replicate the Pokedex. <br>
+The purpose of this challenge was to leverage my CSS skills to the fullest.
 
-Gameboy styled in CSS, <br />
-developped in React, <br />
-fetched the Pokemon API. <br />
+Gameboy app written in React, styled in CSS, with Pokemon API.
 
 <br />
 
